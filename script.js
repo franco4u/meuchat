@@ -5,7 +5,7 @@ const sendButton = document.getElementById('send-button');
 async function loadDatabase() {
     try {
         console.log('Tentando carregar database.json...'); // Adicionado para depuração
-        const response = await fetch('../mychat/database.json');
+        const response = await fetch('https://franco4u.github.io/meuchat/database.json');
         console.log('Resposta do fetch:', response); // Adicionado para depuração
         if (!response.ok) {
             throw new Error(`Erro ao carregar database.json: ${response.status}`);
@@ -52,7 +52,7 @@ sendButton.addEventListener('click', async () => {
     userInput.value = '';
 
     const botResponse = await getBotResponse(userMessage);
-    appendMessage(botResponse, 'MyChat');
+    appendMessage(botResponse, 'MeuChat');
 
 
 
